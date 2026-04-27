@@ -2,6 +2,9 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
+
+//生成文章的静态路径
+//getStaticPaths 构建时运行，给每个文章生成静态Html
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
@@ -9,6 +12,7 @@ export async function getStaticPaths() {
 		props: post,
 	}));
 }
+
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
@@ -16,5 +20,6 @@ const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>
+	<!-- 文章内容 -->
 	<Content />
 </BlogPost>

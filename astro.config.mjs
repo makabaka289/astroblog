@@ -6,8 +6,17 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://makabakablog.site/',
 	integrations: [mdx(), sitemap()],
+	// 插件安装
+	// markdown: {
+	// 	remarkPlugins: [remarkToc],
+	// },
+
+	//设置端口
+	server:{
+		port:4321
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),

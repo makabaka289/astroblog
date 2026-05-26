@@ -10,3 +10,6 @@ heroImage: '../../assets/mc_mod_1.png'
 目前查了一下攻略，推荐学习`fabric`，主要是轻量化，偏向于优化方面。[fabric中文网](https://wiki.fabricmc.net/zh_cn:tutorial:start)
 
 这个地方就开始记录mod的学习记录了
+
+date: '2026-5-3'
+
